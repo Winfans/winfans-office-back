@@ -1,4 +1,4 @@
-package top.wffanshao;
+package top.wffanshao.office;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
