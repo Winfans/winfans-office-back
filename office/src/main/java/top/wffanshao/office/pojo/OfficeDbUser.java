@@ -1,7 +1,7 @@
 package top.wffanshao.office.pojo;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
@@ -11,9 +11,9 @@ public class OfficeDbUser {
     private String userName;
     private String userPasswd;
     private int admin;
-    private Date registerTime;
-    private Date firstLoginTime;
-    private Date lastLoginTime;
+    private Timestamp registerTime;
+    private Timestamp firstLoginTime;
+    private Timestamp lastLoginTime;
 
     @Id
     @Column(name = "user_id", nullable = false)
@@ -55,36 +55,6 @@ public class OfficeDbUser {
         this.admin = admin;
     }
 
-    @Basic
-    @Column(name = "register_time", nullable = false)
-    public Date getRegisterTime() {
-        return registerTime;
-    }
-
-    public void setRegisterTime(Date registerTime) {
-        this.registerTime = registerTime;
-    }
-
-    @Basic
-    @Column(name = "first_login_time", nullable = false)
-    public Date getFirstLoginTime() {
-        return firstLoginTime;
-    }
-
-    public void setFirstLoginTime(Date firstLoginTime) {
-        this.firstLoginTime = firstLoginTime;
-    }
-
-    @Basic
-    @Column(name = "last_login_time", nullable = false)
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
-
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -102,5 +72,35 @@ public class OfficeDbUser {
     @Override
     public int hashCode() {
         return Objects.hash(userId, userName, userPasswd, admin, registerTime, firstLoginTime, lastLoginTime);
+    }
+
+    @Basic
+    @Column(name = "register_time", nullable = false)
+    public Timestamp getRegisterTime() {
+        return registerTime;
+    }
+
+    public void setRegisterTime(Timestamp registerTime) {
+        this.registerTime = registerTime;
+    }
+
+    @Basic
+    @Column(name = "first_login_time", nullable = true)
+    public Timestamp getFirstLoginTime() {
+        return firstLoginTime;
+    }
+
+    public void setFirstLoginTime(Timestamp firstLoginTime) {
+        this.firstLoginTime = firstLoginTime;
+    }
+
+    @Basic
+    @Column(name = "last_login_time", nullable = true)
+    public Timestamp getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(Timestamp lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
     }
 }

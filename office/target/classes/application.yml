@@ -48,4 +48,13 @@ spring:
       ddl-auto: update
       naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
+office:
+  jwt:
+    secret: office@Login(Auth}*^520)&jobgo!#% # 登录校验的密钥
+    pubKeyPath: /usr/local/tmp/rsa/rsa.pub # 公钥地址
+    priKeyPath: /usr/local/tmp/rsa/rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: OFFICE_TOKEN
+    cookieMaxAge: 1800
+
 

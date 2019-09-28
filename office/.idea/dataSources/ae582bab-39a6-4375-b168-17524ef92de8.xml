@@ -894,7 +894,7 @@
       <ColNames>submenu_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="222" parent="209" name="team_idteam_id">
+    <column id="222" parent="209" name="team_id">
       <Position>1</Position>
       <Comment>团队id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -915,12 +915,26 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="225" parent="209" name="PRIMARY">
+    <column id="225" parent="209" name="first_created_time">
+      <Position>4</Position>
+      <Comment>首次创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="226" parent="209" name="last_updated_time">
+      <Position>5</Position>
+      <Comment>最后一次修改时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="227" parent="209" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>team_idteam_id</ColNames>
+      <ColNames>team_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="226" parent="210" name="user_id">
+    <column id="228" parent="210" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -928,54 +942,52 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="210" name="user_name">
+    <column id="229" parent="210" name="user_name">
       <Position>2</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="210" name="user_passwd">
+    <column id="230" parent="210" name="user_passwd">
       <Position>3</Position>
       <Comment>用户密码</Comment>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="210" name="admin">
+    <column id="231" parent="210" name="admin">
       <Position>4</Position>
       <Comment>超级管理员：0、普通用户 1、超级管理员</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="230" parent="210" name="register_time">
+    <column id="232" parent="210" name="register_time">
       <Position>5</Position>
       <Comment>注册日期</Comment>
-      <DataType>date|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="210" name="first_login_time">
+    <column id="233" parent="210" name="first_login_time">
       <Position>6</Position>
       <Comment>首次登录日期</Comment>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="210" name="last_login_time">
+    <column id="234" parent="210" name="last_login_time">
       <Position>7</Position>
       <Comment>最后登录日期</Comment>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="233" parent="210" name="PRIMARY">
+    <key id="235" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="234" parent="211" name="user_id">
+    <column id="236" parent="211" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -983,7 +995,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="211" name="team_id">
+    <column id="237" parent="211" name="team_id">
       <Position>2</Position>
       <Comment>团队id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -991,7 +1003,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="211" name="team_admin">
+    <column id="238" parent="211" name="team_admin">
       <Position>3</Position>
       <Comment>团队管理员：0、队员 1、团队管理员</Comment>
       <DataType>int(1)|0s</DataType>
@@ -999,7 +1011,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="237" parent="211" name="PRIMARY">
+    <key id="239" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 team_id</ColNames>

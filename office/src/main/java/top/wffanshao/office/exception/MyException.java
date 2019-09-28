@@ -12,6 +12,6 @@ import top.wffanshao.office.enums.ExceptionEnum;
 @NoArgsConstructor
 @Getter
 @AllArgsConstructor
-public class MyException extends RuntimeException{
+public final class MyException extends RuntimeException{
     private ExceptionEnum exceptionEnum;
 }

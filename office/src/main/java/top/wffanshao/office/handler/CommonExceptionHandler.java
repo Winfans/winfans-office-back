@@ -10,7 +10,7 @@ import top.wffanshao.office.vo.ExceptionResult;
  * 描述：统一异常处理器
  */
 @ControllerAdvice
-public class CommonExceptionHandler {
+public final class CommonExceptionHandler {
     @ExceptionHandler(MyException.class)
     public ResponseEntity<ExceptionResult> handlerException(MyException e) {
         return ResponseEntity.status(e.getExceptionEnum().getCode()).body(new ExceptionResult(e.getExceptionEnum()));

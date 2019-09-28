@@ -19,6 +19,13 @@ public interface MenuService {
     List<MenuDTO> findAllMenu();
 
     /**
+     * 描述：查询所有子菜单
+     *
+     * @return
+     */
+    List<OfficeDbSubmenu> findAllSubmenu();
+
+    /**
      * 描述：根据子菜单id查询子菜单
      *
      * @return

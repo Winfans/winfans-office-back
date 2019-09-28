@@ -7,7 +7,7 @@ import top.wffanshao.office.enums.ExceptionEnum;
  * 描述：异常返回结果
  */
 @Data
-public class ExceptionResult {
+public final class ExceptionResult {
     private int status;
     private String msg;
 

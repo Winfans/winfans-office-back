@@ -2,31 +2,152 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3b7e3ec-cbb6-4839-a2f0-2def4aebb202" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/SubmenuDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbMainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbSubmenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserTeamPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/bo/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/constants/JwtConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/TeamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/TeamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/properties/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/TeamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/TeamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CodecUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/ObjectUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/RsaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/top/wffanshao/office/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/SpringbootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/bo/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/properties/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/utils/JwtConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/utils/ObjectUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/auth/utils/RsaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/enums/ExceptionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/exception/MyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/handle/CommonExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/utils/CodecUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/utils/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/utils/IdWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/utils/NumberUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/vo/ExceptionResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/commom/vo/ResponseResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/gateway/config/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/gateway/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/gateway/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/job/controller/JobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/job/pojo/JobgoJgDbJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/job/pojo/JobgoJgDbJobStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/job/service/JobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/job/service/impl/JobServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/config/IdWorkerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/config/PayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/controller/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/controller/NotifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dao/ContractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dao/ContractStatusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dao/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dao/OrderDetailDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dao/OrderStatusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dto/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dto/OrderDtailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/dto/OrderStatusDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/enums/OrderStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/pojo/JobgoJgDbContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/pojo/JobgoJgDbContractStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/pojo/JobgoJgDbOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/pojo/JobgoJgDbOrderDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/pojo/JobgoJgDbOrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/properties/IdWorkerProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/properties/PayProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/service/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/service/impl/ContractServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/utils/PayHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/order/utils/PayState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/sms/listener/SmsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/sms/properties/SmsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/sms/utils/SmsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/upload/config/FastClientImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/upload/controller/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/upload/properties/UploadProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/upload/service/UploadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/upload/service/impl/UploadServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/controller/EnterpriseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/controller/SchoolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/EnterpriseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/EnterpriseStatusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/SchoolDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/SchoolStatusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/StudentStatusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbEnterprise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbEnterpriseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbSchool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbSchoolStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbStudentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/pojo/JobgoJgDbUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/EnterpriseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/SchoolService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/impl/EnterpriseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/impl/SchoolServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/java/com/jobgo/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae582bab-39a6-4375-b168-17524ef92de8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae582bab-39a6-4375-b168-17524ef92de8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/office.iml" beforeDir="false" afterPath="$PROJECT_DIR$/office.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/MenuDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/MenuDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/enums/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/enums/ExceptionEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/exception/MyException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/exception/MyException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/handler/CommonExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/handler/CommonExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/vo/ExceptionResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/vo/ExceptionResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/vo/ResponseResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/vo/ResponseResult.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,59 +167,16 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/top/wffanshao/office/UserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="55">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -106,42 +184,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="61" column="53" lean-forward="true" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-              <folding>
-                <element signature="e#1567#1568#0" expanded="true" />
-                <element signature="e#1620#1621#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="261">
+              <caret line="180" lean-forward="true" selection-start-line="149" selection-end-line="180" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/SubmenuDAO.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="171">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -162,19 +224,50 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbMainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseData.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/handler/CommonExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/SubmenuDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/constants/JwtConstans.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CookieUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/top/winfans/office/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/TeamDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/TeamService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/AuthServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/TeamServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/properties/JwtProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/TeamController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CodecUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/JwtUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/ObjectUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/RsaUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/bo/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/GlobalCorsConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/MvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/constants/JwtConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/top/wffanshao/office/UserTest.java" />
       </list>
     </option>
   </component>
@@ -191,10 +284,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="163" />
-    <option name="y" value="33" />
-    <option name="width" value="1774" />
-    <option name="height" value="924" />
+    <option name="x" value="165" />
+    <option name="y" value="46" />
+    <option name="width" value="1824" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,7 +296,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,7 +336,134 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="office" type="b2602c69:ProjectViewProjectNode" />
@@ -253,10 +472,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +509,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569162211048" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569658454388" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mr-test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -278,15 +520,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="top.wffanshao.office.vo" />
-      <recent name="top.wffanshao.office.enums" />
+      <recent name="top.wffanshao.office.controller" />
+      <recent name="top.wffanshao.office.service" />
       <recent name="top.wffanshao.office.dao" />
+      <recent name="top.wffanshao.office.config" />
+      <recent name="top.wffanshao.office.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WF帆少\Desktop\winfans-office\office\src\main\java\top\wffanshao\office" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="top.wffanshao.office.pojo" />
+      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="top.wffanshao.office.service.impl" />
@@ -305,6 +550,38 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootApplication (1)">
+    <configuration name="UserTest.testLogin (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="office" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.wffanshao.office.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.wffanshao.office" />
+      <option name="MAIN_CLASS_NAME" value="top.wffanshao.office.UserTest" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="office" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.winfans.office.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.winfans.office" />
+      <option name="MAIN_CLASS_NAME" value="top.winfans.office.UserTest" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="office" />
       <extension name="coverage">
@@ -328,8 +605,13 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringbootApplication (1)" />
+        <item itemvalue="JUnit.UserTest.testLogin (1)" />
+        <item itemvalue="JUnit.UserTest.testLogin" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -342,20 +624,36 @@
       <option name="presentableId" value="Default" />
       <updated>1569137552780</updated>
       <workItem from="1569137556795" duration="8576000" />
-      <workItem from="1569205712439" duration="4416000" />
+      <workItem from="1569205712439" duration="9806000" />
+      <workItem from="1569299954918" duration="28650000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="UserTest_testLogin - 2019.09.26 at 13h 40m 23s.xml">
+      <configuration name="UserTest.testLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testLogin_(1) - 2019.09.26 at 13h 43m 49s.xml">
+      <configuration name="UserTest.testLogin (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testLogin_(1) - 2019.09.26 at 13h 46m 33s.xml">
+      <configuration name="UserTest.testLogin (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testLogin_(1) - 2019.09.26 at 13h 50m 25s.xml">
+      <configuration name="UserTest.testLogin (1)" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12992000" />
+    <option name="totallyTimeSpent" value="47032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="27" width="1419" height="739" extended-state="1" />
+    <frame x="132" y="37" width="1459" height="798" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7467249" visible="true" weight="0.24099927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8595388" visible="true" weight="0.21199143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.2532751" side_tool="true" visible="true" weight="0.24099927" />
+      <window_info id="Persistence" order="3" sideWeight="0.14046122" side_tool="true" visible="true" weight="0.21199143" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -363,7 +661,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24546953" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2837838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,7 +680,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20352682" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2512491" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -394,20 +692,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ae582bab-39a6-4375-b168-17524ef92de8/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbSubmenu.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -423,30 +707,244 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserTeamPK.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/SubmenuDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+            <element signature="e#2284#2285#0" expanded="true" />
+            <element signature="e#2332#2333#0" expanded="true" />
+            <element signature="e#2443#2444#0" expanded="true" />
+            <element signature="e#2480#2481#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="e#2740#2741#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2851#2852#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/TeamService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/TeamDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CodecUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/CookieUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2432">
+          <caret line="135" column="38" lean-forward="true" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/ObjectUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/utils/RsaUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ExceptionResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="171">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/bo/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/GlobalCorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/constants/JwtConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/TeamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -455,70 +953,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/MenuDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="223">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/MainMenuDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/exception/MyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/SubmenuDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/handler/CommonExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="199">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/properties/JwtProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/TeamServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/AuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="61" column="53" lean-forward="true" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-          <folding>
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/top/wffanshao/office/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="55">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="180" lean-forward="true" selection-start-line="149" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>

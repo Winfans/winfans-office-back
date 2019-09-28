@@ -1,0 +1,53 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt",
+      "type": "top.wffanshao.office.properties.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.cookie-max-age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.cookie-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "defaultValue": 0,
+      "name": "office.jwt.expire",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.pri-key-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.private-key",
+      "type": "java.security.PrivateKey"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.pub-key-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.public-key",
+      "type": "java.security.PublicKey"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.JwtProperties",
+      "name": "office.jwt.secret",
+      "type": "java.lang.String"
+    }
+  ]
+}

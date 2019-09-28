@@ -16,7 +16,7 @@ import java.util.List;
  * 描述：菜单Service实现类
  */
 @Service
-public class MenuServiceImpl implements MenuService {
+public final class MenuServiceImpl implements MenuService {
 
     @Autowired
     private MainMenuDAO mainMenuDAO;
@@ -49,6 +49,16 @@ public class MenuServiceImpl implements MenuService {
         });
 
         return menus;
+    }
+
+    /**
+     * 描述：查询所有子菜单
+     *
+     * @return
+     */
+    @Override
+    public List<OfficeDbSubmenu> findAllSubmenu() {
+        return submenuDAO.findAll();
     }
 
     /**

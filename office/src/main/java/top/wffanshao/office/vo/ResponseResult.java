@@ -8,7 +8,7 @@ import lombok.Data;
  * @param <T>
  */
 @Data
-public class ResponseResult<T> {
+public final class ResponseResult<T> {
     private int status;
     private String msg;
     private T data;

@@ -10,7 +10,7 @@ import java.util.List;
  * 描述：菜单DTO
  */
 @Data
-public class MenuDTO {
+public final class MenuDTO {
 
     private int mainMenuId;
     private String mainMenuName;
