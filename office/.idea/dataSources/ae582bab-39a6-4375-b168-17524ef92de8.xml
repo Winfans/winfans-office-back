@@ -821,12 +821,108 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="207" parent="4" name="office_db_main_menu"/>
-    <table id="208" parent="4" name="office_db_submenu"/>
-    <table id="209" parent="4" name="office_db_team"/>
-    <table id="210" parent="4" name="office_db_user"/>
-    <table id="211" parent="4" name="office_db_user_team"/>
-    <column id="212" parent="207" name="main_menu_id">
+    <table id="207" parent="4" name="office_db_contact"/>
+    <table id="208" parent="4" name="office_db_customer"/>
+    <table id="209" parent="4" name="office_db_main_menu"/>
+    <table id="210" parent="4" name="office_db_order"/>
+    <table id="211" parent="4" name="office_db_submenu"/>
+    <table id="212" parent="4" name="office_db_team"/>
+    <table id="213" parent="4" name="office_db_user"/>
+    <table id="214" parent="4" name="office_db_user_team"/>
+    <column id="215" parent="207" name="user_id">
+      <Position>1</Position>
+      <Comment>业务员id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="216" parent="207" name="customer_id">
+      <Position>2</Position>
+      <Comment>客户id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="217" parent="207" name="contact_time">
+      <Position>3</Position>
+      <Comment>联系时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="218" parent="207" name="detail">
+      <Position>4</Position>
+      <Comment>详情</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="219" parent="207" name="customer_id">
+      <ColNames>customer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="220" parent="207" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+customer_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="221" parent="207" name="office_db_contact_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="222" parent="207" name="office_db_contact_ibfk_2">
+      <ColNames>customer_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_customer</RefTableName>
+      <RefColNames>customer_id</RefColNames>
+    </foreign-key>
+    <column id="223" parent="208" name="customer_id">
+      <Position>1</Position>
+      <Comment>客户id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="224" parent="208" name="user_id">
+      <Position>2</Position>
+      <Comment>业务员id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="225" parent="208" name="customer_name">
+      <Position>3</Position>
+      <Comment>客户名称</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="226" parent="208" name="status">
+      <Position>4</Position>
+      <Comment>状态：1、失败 2、成交 3、潜在</Comment>
+      <DataType>int(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="227" parent="208" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="228" parent="208" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>customer_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="229" parent="208" name="office_db_customer_ibfk_2">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="230" parent="209" name="main_menu_id">
       <Position>1</Position>
       <Comment>主菜单id</Comment>
       <DataType>int(2)|0s</DataType>
@@ -834,19 +930,67 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="213" parent="207" name="main_menu_name">
+    <column id="231" parent="209" name="main_menu_name">
       <Position>2</Position>
       <Comment>主菜单名称</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="214" parent="207" name="PRIMARY">
+    <key id="232" parent="209" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>main_menu_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="215" parent="208" name="submenu_id">
+    <column id="233" parent="210" name="user_id">
+      <Position>1</Position>
+      <Comment>业务员id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="234" parent="210" name="customer_id">
+      <Position>2</Position>
+      <Comment>客户id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="235" parent="210" name="money">
+      <Position>3</Position>
+      <Comment>签单金额</Comment>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="236" parent="210" name="detail">
+      <Position>4</Position>
+      <Comment>详情</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="237" parent="210" name="customer_id">
+      <ColNames>customer_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="238" parent="210" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+customer_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="239" parent="210" name="office_db_order_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="240" parent="210" name="office_db_order_ibfk_2">
+      <ColNames>customer_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_customer</RefTableName>
+      <RefColNames>customer_id</RefColNames>
+    </foreign-key>
+    <column id="241" parent="211" name="submenu_id">
       <Position>1</Position>
       <Comment>子菜单id</Comment>
       <DataType>int(3)|0s</DataType>
@@ -854,87 +998,94 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="208" name="main_menu_id">
+    <column id="242" parent="211" name="main_menu_id">
       <Position>2</Position>
       <Comment>主菜单id</Comment>
       <DataType>int(2)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="217" parent="208" name="submenu_icon">
+    <column id="243" parent="211" name="submenu_icon">
       <Position>3</Position>
       <Comment>子菜单图标</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="218" parent="208" name="submenu_icon_bg_color">
+    <column id="244" parent="211" name="submenu_icon_bg_color">
       <Position>4</Position>
       <Comment>子菜单图标底色</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="208" name="submenu_name">
+    <column id="245" parent="211" name="submenu_name">
       <Position>5</Position>
       <Comment>子菜单名称</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="208" name="submenu_description">
+    <column id="246" parent="211" name="submenu_description">
       <Position>6</Position>
       <Comment>子菜单描述</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="221" parent="208" name="PRIMARY">
+    <column id="247" parent="211" name="home_path">
+      <Position>7</Position>
+      <Comment>家路径</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="248" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>submenu_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="222" parent="209" name="team_id">
+    <column id="249" parent="212" name="team_id">
       <Position>1</Position>
       <Comment>团队id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="223" parent="209" name="team_name">
+    <column id="250" parent="212" name="team_name">
       <Position>2</Position>
       <Comment>团队名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="224" parent="209" name="submenu_id">
+    <column id="251" parent="212" name="submenu_id">
       <Position>3</Position>
       <Comment>子菜单id</Comment>
       <DataType>int(3)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="225" parent="209" name="first_created_time">
+    <column id="252" parent="212" name="first_created_time">
       <Position>4</Position>
       <Comment>首次创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="209" name="last_updated_time">
+    <column id="253" parent="212" name="last_updated_time">
       <Position>5</Position>
       <Comment>最后一次修改时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="227" parent="209" name="PRIMARY">
+    <key id="254" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>team_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="228" parent="210" name="user_id">
+    <column id="255" parent="213" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -942,52 +1093,52 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="210" name="user_name">
+    <column id="256" parent="213" name="user_name">
       <Position>2</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="230" parent="210" name="user_passwd">
+    <column id="257" parent="213" name="user_passwd">
       <Position>3</Position>
       <Comment>用户密码</Comment>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="210" name="admin">
+    <column id="258" parent="213" name="admin">
       <Position>4</Position>
       <Comment>超级管理员：0、普通用户 1、超级管理员</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="210" name="register_time">
+    <column id="259" parent="213" name="register_time">
       <Position>5</Position>
       <Comment>注册日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="210" name="first_login_time">
+    <column id="260" parent="213" name="first_login_time">
       <Position>6</Position>
       <Comment>首次登录日期</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="210" name="last_login_time">
+    <column id="261" parent="213" name="last_login_time">
       <Position>7</Position>
       <Comment>最后登录日期</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="210" name="PRIMARY">
+    <key id="262" parent="213" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="236" parent="211" name="user_id">
+    <column id="263" parent="214" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -995,7 +1146,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="211" name="team_id">
+    <column id="264" parent="214" name="team_id">
       <Position>2</Position>
       <Comment>团队id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1003,7 +1154,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="211" name="team_admin">
+    <column id="265" parent="214" name="team_admin">
       <Position>3</Position>
       <Comment>团队管理员：0、队员 1、团队管理员</Comment>
       <DataType>int(1)|0s</DataType>
@@ -1011,11 +1162,27 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="239" parent="211" name="PRIMARY">
+    <index id="266" parent="214" name="team_id">
+      <ColNames>team_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="267" parent="214" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 team_id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="268" parent="214" name="office_db_user_team_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="269" parent="214" name="office_db_user_team_ibfk_2">
+      <ColNames>team_id</ColNames>
+      <RefSchemaName>office_db</RefSchemaName>
+      <RefTableName>office_db_team</RefTableName>
+      <RefColNames>team_id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

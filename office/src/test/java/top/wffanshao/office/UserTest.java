@@ -9,6 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import top.wffanshao.office.pojo.OfficeDbUser;
 import top.wffanshao.office.service.UserService;
 
+import java.util.HashMap;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserTest {
@@ -18,6 +20,7 @@ public class UserTest {
 
     @Test
     public void testLogin() {
+
         OfficeDbUser user = new OfficeDbUser();
         user.setUserName("winfans");
         user.setUserPasswd("12345678");

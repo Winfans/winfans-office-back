@@ -12,6 +12,7 @@ public class OfficeDbSubmenu {
     private String submenuIconBgColor;
     private String submenuName;
     private String submenuDescription;
+    private String homePath;
 
     @Id
     @Column(name = "submenu_id", nullable = false)
@@ -89,5 +90,15 @@ public class OfficeDbSubmenu {
     @Override
     public int hashCode() {
         return Objects.hash(submenuId, mainMenuId, submenuIcon, submenuIconBgColor, submenuName, submenuDescription);
+    }
+
+    @Basic
+    @Column(name = "home_path", nullable = true, length = 50)
+    public String getHomePath() {
+        return homePath;
+    }
+
+    public void setHomePath(String homePath) {
+        this.homePath = homePath;
     }
 }

@@ -2,6 +2,7 @@ package top.wffanshao.office.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
 import top.wffanshao.office.pojo.OfficeDbSubmenu;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * 描述：子菜单DAO
  */
+@Repository
 public interface SubmenuDAO extends JpaRepository<OfficeDbSubmenu, Integer>, JpaSpecificationExecutor<OfficeDbSubmenu> {
 
     /**

@@ -2,12 +2,14 @@ package top.wffanshao.office.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
 import top.wffanshao.office.pojo.OfficeDbUser;
 
 
 /**
  * 描述：用户DAO
  */
+@Repository
 public interface UserDAO extends JpaRepository<OfficeDbUser, Integer>, JpaSpecificationExecutor<OfficeDbUser> {
 
     /**

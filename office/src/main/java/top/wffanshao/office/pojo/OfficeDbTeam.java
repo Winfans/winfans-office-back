@@ -14,6 +14,7 @@ public class OfficeDbTeam {
     private Timestamp lastUpdatedTime;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "team_id", nullable = false)
     public int getTeamId() {
         return teamId;
