@@ -5,6 +5,11 @@
       "sourceType": "top.wffanshao.office.properties.JwtProperties",
       "name": "office.jwt",
       "type": "top.wffanshao.office.properties.JwtProperties"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.LoginProperties",
+      "name": "office.login",
+      "type": "top.wffanshao.office.properties.LoginProperties"
     }
   ],
   "properties": [
@@ -47,6 +52,21 @@
     {
       "sourceType": "top.wffanshao.office.properties.JwtProperties",
       "name": "office.jwt.secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.LoginProperties",
+      "name": "office.login.cookie-max-age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.LoginProperties",
+      "name": "office.login.cookie-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.wffanshao.office.properties.LoginProperties",
+      "name": "office.login.cookie-value",
       "type": "java.lang.String"
     }
   ]

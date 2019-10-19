@@ -8,6 +8,9 @@ import top.wffanshao.office.pojo.OfficeDbUser;
 
 /**
  * 描述：用户DAO
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @Repository
 public interface UserDAO extends JpaRepository<OfficeDbUser, Integer>, JpaSpecificationExecutor<OfficeDbUser> {

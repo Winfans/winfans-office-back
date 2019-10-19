@@ -11,6 +11,7 @@ public class OfficeDbMainMenu {
 
     @Id
     @Column(name = "main_menu_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getMainMenuId() {
         return mainMenuId;
     }

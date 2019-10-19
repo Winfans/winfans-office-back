@@ -13,9 +13,11 @@ public class OfficeDbSubmenu {
     private String submenuName;
     private String submenuDescription;
     private String homePath;
+    private String subPath;
 
     @Id
     @Column(name = "submenu_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getSubmenuId() {
         return submenuId;
     }
@@ -100,5 +102,15 @@ public class OfficeDbSubmenu {
 
     public void setHomePath(String homePath) {
         this.homePath = homePath;
+    }
+
+    @Basic
+    @Column(name = "sub_path", nullable = true, length = 50)
+    public String getSubPath() {
+        return subPath;
+    }
+
+    public void setSubPath(String subPath) {
+        this.subPath = subPath;
     }
 }

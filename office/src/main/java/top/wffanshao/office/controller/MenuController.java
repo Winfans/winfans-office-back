@@ -19,6 +19,9 @@ import java.util.List;
 
 /**
  * 描述：菜单Controller
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @RestController
 @RequestMapping("menu")
@@ -61,8 +64,6 @@ public final class MenuController {
 
         return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", submenus));
     }
-
-
 
 
     /**

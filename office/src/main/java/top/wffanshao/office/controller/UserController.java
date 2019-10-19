@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
 import top.wffanshao.office.pojo.OfficeDbUser;
@@ -14,6 +15,9 @@ import top.wffanshao.office.vo.ResponseResult;
 
 /**
  * 描述：用户Controller
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @RestController
 @RequestMapping("user")
@@ -53,8 +57,21 @@ public final class UserController {
         if (!result) {
             throw new MyException(ExceptionEnum.USER_REGISTER_FAIL);
         }
+
         return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseResult<>(201, "注册成功"));
     }
+
+    /**
+     * 描述：查询用户信息
+     *
+     * @param token token
+     * @return 用户信息
+     */
+    @GetMapping("getUserDTO")
+    public ResponseEntity<ResponseResult<UserDTO>> getUserDTO(@CookieValue("OFFICE_TOKEN") String token) {
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userService.getUserDTO(token)));
+    }
+
 
 
 }

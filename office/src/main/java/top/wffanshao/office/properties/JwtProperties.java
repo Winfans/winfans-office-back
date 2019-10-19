@@ -19,21 +19,29 @@ import java.security.PublicKey;
 @Component
 @ConfigurationProperties(prefix = "office.jwt")
 public final class JwtProperties {
-    private String secret; // 密钥
+    // 密钥
+    private String secret;
 
-    private String pubKeyPath;// 公钥
+    // 公钥
+    private String pubKeyPath;
 
-    private String priKeyPath;// 私钥
+    // 私钥
+    private String priKeyPath;
 
-    private int expire;// token过期时间
+    // token过期时间
+    private int expire;
 
-    private PublicKey publicKey; // 公钥
+    // 公钥
+    private PublicKey publicKey;
 
-    private PrivateKey privateKey; // 私钥
+    // 私钥
+    private PrivateKey privateKey;
 
-    private String cookieName; // cookie名字
+    // cookie名字
+    private String cookieName;
 
-    private Integer cookieMaxAge; // cookie生命周期
+    // cookie生命周期
+    private Integer cookieMaxAge;
 
     /**
      * 描述：jwt初始化

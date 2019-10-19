@@ -10,13 +10,14 @@ public class OfficeDbUser {
     private int userId;
     private String userName;
     private String userPasswd;
-    private int admin;
     private Timestamp registerTime;
     private Timestamp firstLoginTime;
     private Timestamp lastLoginTime;
+    private int status;
 
     @Id
     @Column(name = "user_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getUserId() {
         return userId;
     }
@@ -45,15 +46,6 @@ public class OfficeDbUser {
         this.userPasswd = userPasswd;
     }
 
-    @Basic
-    @Column(name = "admin", nullable = false)
-    public int getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(int admin) {
-        this.admin = admin;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -61,7 +53,6 @@ public class OfficeDbUser {
         if (o == null || getClass() != o.getClass()) return false;
         OfficeDbUser that = (OfficeDbUser) o;
         return userId == that.userId &&
-                admin == that.admin &&
                 Objects.equals(userName, that.userName) &&
                 Objects.equals(userPasswd, that.userPasswd) &&
                 Objects.equals(registerTime, that.registerTime) &&
@@ -71,7 +62,7 @@ public class OfficeDbUser {
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userName, userPasswd, admin, registerTime, firstLoginTime, lastLoginTime);
+        return Objects.hash(userId, userName, userPasswd, registerTime, firstLoginTime, lastLoginTime);
     }
 
     @Basic
@@ -102,5 +93,15 @@ public class OfficeDbUser {
 
     public void setLastLoginTime(Timestamp lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
+    }
+
+    @Basic
+    @Column(name = "status", nullable = false)
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

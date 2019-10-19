@@ -105,17 +105,20 @@ public class TeamServiceImpl implements TeamService {
         }
 
         List<TeamDTO> teams = new LinkedList<>();
-        TeamDTO teamDTO = new TeamDTO();
+
 
         List<OfficeDbUserTeam> userTeams = userTeamDAO.findAllByUserId(userInfo.getUserId());
 
         userTeams.forEach(userTeam -> {
             OfficeDbTeam team = this.findTeamByTeamId(userTeam.getTeamId());
             OfficeDbSubmenu submenu = menuService.findSubmenuBySubmenuId(team.getSubmenuId());
+            TeamDTO teamDTO = new TeamDTO();
             teamDTO.setTeamId(userTeam.getTeamId());
             teamDTO.setTeamName(team.getTeamName());
             teamDTO.setSubmenuName(submenu.getSubmenuName());
             teamDTO.setSubmenuIconBgColor(submenu.getSubmenuIconBgColor());
+            teamDTO.setHomePath(submenu.getHomePath());
+            teamDTO.setSubPath(submenu.getSubPath());
             teams.add(teamDTO);
         });
         return teams;

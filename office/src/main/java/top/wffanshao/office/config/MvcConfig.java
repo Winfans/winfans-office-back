@@ -47,6 +47,8 @@ public class MvcConfig implements WebMvcConfigurer {
         excludePath.add("/auth/auth");
         excludePath.add("/auth/verify");
         excludePath.add("/user/register");
+//        excludePath.add("/wx/wxAccess");
+
 
         registry.addInterceptor(loginInterceptor())
                 .addPathPatterns("/**").excludePathPatterns(excludePath);

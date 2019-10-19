@@ -56,5 +56,13 @@ office:
     expire: 30 # 过期时间,单位分钟
     cookieName: OFFICE_TOKEN
     cookieMaxAge: 1800
+  login:
+    cookieName: b0ad13e59c636ca3709e2622089f7718
+    cookieValue: aba56d95f20f3726d74cd5e37da00efd
+    cookieMaxAge: 1800
+
+
+
+
 
 

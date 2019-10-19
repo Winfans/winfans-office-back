@@ -9,6 +9,9 @@ import java.util.List;
 
 /**
  * 描述：子菜单DAO
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @Repository
 public interface SubmenuDAO extends JpaRepository<OfficeDbSubmenu, Integer>, JpaSpecificationExecutor<OfficeDbSubmenu> {

@@ -9,6 +9,7 @@ import top.wffanshao.office.bo.UserInfo;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
 import top.wffanshao.office.properties.JwtProperties;
+import top.wffanshao.office.properties.LoginProperties;
 import top.wffanshao.office.service.AuthService;
 import top.wffanshao.office.utils.CookieUtils;
 import top.wffanshao.office.utils.JwtUtils;
@@ -19,6 +20,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 描述：认证Controller
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @RestController
 @RequestMapping("auth")
@@ -26,6 +30,9 @@ public final class AuthController {
 
     @Autowired
     private JwtProperties jwtProperties;
+
+    @Autowired
+    private LoginProperties loginProperties;
 
     @Autowired
     private AuthService authService;
@@ -43,6 +50,11 @@ public final class AuthController {
         if (StringUtils.isBlank(token)) {
             throw new MyException(ExceptionEnum.NO_AUTHENTICATION);
         }
+        // 前端登录
+        // isLogin!~&({ = b0ad13e59c636ca3709e2622089f7718
+        // true!~&({  = aba56d95f20f3726d74cd5e37da00efd
+        CookieUtils.setCookie(request, response, loginProperties.getCookieName(),
+                loginProperties.getCookieValue(), loginProperties.getCookieMaxAge(), true);
 
         // 将token写入cookie,并指定httpOnly为true，防止通过JS获取和修改
         CookieUtils.setCookie(request, response, jwtProperties.getCookieName(),

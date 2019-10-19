@@ -11,12 +11,16 @@ import java.util.List;
 
 /**
  * 描述：用户DAO
+ *
+ * @author 杨炜帆
+ * @date 2019/10/12
  */
 @Repository
 public interface UserTeamDAO extends JpaRepository<OfficeDbUserTeam, OfficeDbUserTeamPK>, JpaSpecificationExecutor<OfficeDbUserTeam> {
 
     /**
      * 描述：根据用户id查询所有团队
+     *
      * @param userId
      * @return
      */

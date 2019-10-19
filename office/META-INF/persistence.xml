@@ -7,6 +7,14 @@
         <class>top.wffanshao.office.pojo.OfficeDbTeam</class>
         <class>top.wffanshao.office.pojo.OfficeDbUser</class>
         <class>top.wffanshao.office.pojo.OfficeDbUserTeam</class>
+        <class>top.wffanshao.office.pojo.HibernateSequence</class>
+        <class>top.wffanshao.office.pojo.OfficeDbContact</class>
+        <class>top.wffanshao.office.pojo.OfficeDbCustomer</class>
+        <class>top.wffanshao.office.pojo.OfficeDbOrder</class>
+        <class>top.wffanshao.office.pojo.OfficeDbRole</class>
+        <class>top.wffanshao.office.pojo.OfficeDbUserRole</class>
+        <class>top.wffanshao.office.pojo.OfficeDbUserCustomer</class>
+        <class>top.wffanshao.office.pojo.OfficeDbWritten</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/office_db"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
