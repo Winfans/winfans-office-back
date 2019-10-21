@@ -11,6 +11,6 @@ import top.wffanshao.office.pojo.OfficeDbWritten;
  * @author 杨炜帆
  * @date 2019/10/12
  */
-public interface WrittenDAO extends JpaRepository<OfficeDbWritten, OfficeDbWritten>, JpaSpecificationExecutor<OfficeDbWritten>{
+public interface WrittenDAO extends JpaRepository<OfficeDbWritten, Integer>, JpaSpecificationExecutor<OfficeDbWritten>{
 
 }

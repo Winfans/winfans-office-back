@@ -41,20 +41,35 @@ public class WrittenController {
         return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", writtenService.findAllWrittenByPage(teamId, page, size)));
     }
 
+    /**
+     * 描述：根据writtenId查询签单记录
+     *
+     * @param writtenId
+     * @return
+     */
+    @GetMapping("findWrittenByWrittenId/{writtenId}")
+    public ResponseEntity<ResponseResult<WrittenDTO>> findWrittenByTeamId(@PathVariable("writtenId") int writtenId) {
+        WrittenDTO writtenDTO = writtenService.findWrittenByTeamId(writtenId);
+        if (writtenDTO == null) {
+            throw new MyException(ExceptionEnum.WRITTEN_NOT_FOUND);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", writtenDTO));
+    }
+
 
     /**
      * 描述：添加成员
      *
      * @param token
-     * @param written
+     * @param writtenDTO
      * @return
      */
     @PostMapping("addWritten")
     public ResponseEntity<ResponseResult<Void>> addWritten(
             @CookieValue("OFFICE_TOKEN") String token,
-            OfficeDbWritten written
+            WrittenDTO writtenDTO
     ) {
-        boolean result = writtenService.addWritten(token,written);
+        boolean result = writtenService.addWritten(token,writtenDTO);
 
         if (!result) {
             throw new MyException(ExceptionEnum.WRITTEN_ADD_FAIL);
@@ -77,7 +92,7 @@ public class WrittenController {
             @RequestParam("userId") Integer userId
     ) {
 
-        boolean result = writtenService.deleteWrittenWrittenId(token, writtenId, userId);
+        boolean result = writtenService.deleteWrittenWrittenId(token, writtenId);
 
         if (!result) {
             throw new MyException(ExceptionEnum.WRITTEN_DELETE_FAIL);

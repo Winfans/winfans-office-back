@@ -10,5 +10,13 @@ import top.wffanshao.office.pojo.OfficeDbCustomer;
  * @author 杨炜帆
  * @date 2019/10/17
  */
-public interface CustomerDAO  extends JpaRepository<OfficeDbCustomer, Integer>, JpaSpecificationExecutor<OfficeDbCustomer> {
+public interface CustomerDAO extends JpaRepository<OfficeDbCustomer, Integer>, JpaSpecificationExecutor<OfficeDbCustomer> {
+
+    /**
+     * 根据客户名称查找客户
+     *
+     * @param customerName
+     * @return
+     */
+    OfficeDbCustomer findByCustomerName(String customerName);
 }

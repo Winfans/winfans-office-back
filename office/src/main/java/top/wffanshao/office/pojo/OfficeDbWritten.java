@@ -12,6 +12,7 @@ public class OfficeDbWritten {
     private String detail;
     private Timestamp createTime;
     private Double money;
+
     private int writtenId;
 
     @Basic
@@ -83,6 +84,7 @@ public class OfficeDbWritten {
 
     @Id
     @Column(name = "written_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getWrittenId() {
         return writtenId;
     }

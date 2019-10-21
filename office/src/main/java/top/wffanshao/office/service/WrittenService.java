@@ -26,10 +26,10 @@ public interface WrittenService {
      * 描述：添加成员
      *
      * @param token
-     * @param written
+     * @param writtenDTO
      * @return
      */
-    boolean addWritten(String token, OfficeDbWritten written);
+    boolean addWritten(String token, WrittenDTO writtenDTO);
 
 
     /**
@@ -37,10 +37,9 @@ public interface WrittenService {
      *
      * @param token
      * @param writtenId
-     * @param userId
      * @return
      */
-    boolean deleteWrittenWrittenId(String token, Integer writtenId, Integer userId);
+    boolean deleteWrittenWrittenId(String token, Integer writtenId);
 
 
     /**
@@ -52,4 +51,12 @@ public interface WrittenService {
      * @return
      */
     Boolean updateWrittenByWrittenId(String token, Integer writtenId, OfficeDbWritten written);
+
+    /**
+     * 描述：根据writtenId查询签单记录
+     *
+     * @param writtenId
+     * @return
+     */
+    WrittenDTO findWrittenByTeamId(int writtenId);
 }
