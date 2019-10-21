@@ -58,7 +58,7 @@ public final class CustomerController {
     public ResponseEntity<ResponseResult<ResponsePage<CustomerDTO>>> findAllCustomerTeamIdAndByPage(@PathVariable("teamId") int teamId,
                                                                                                     @PathVariable("page") int page,
                                                                                                     @PathVariable("size") int size) {
-        return ResponseEntity.ok(new ResponseResult<>(200, "客户添加成功", customerService.findAllCustomerTeamIdAndByPage(teamId, page, size)));
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", customerService.findAllCustomerTeamIdAndByPage(teamId, page, size)));
     }
 
 

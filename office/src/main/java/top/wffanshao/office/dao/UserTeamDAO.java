@@ -25,4 +25,28 @@ public interface UserTeamDAO extends JpaRepository<OfficeDbUserTeam, OfficeDbUse
      * @return
      */
     List<OfficeDbUserTeam> findAllByUserId(Integer userId);
+
+    /**
+     * 描述：根据用户id和团队id查看团队成员
+     *
+     * @param userId
+     * @param teamId
+     * @return
+     */
+    OfficeDbUserTeam findByUserIdAndTeamId(Integer userId, Integer teamId);
+
+
+    /**
+     * 根据用户id和团队id删除团队成员
+     * @param userId
+     * @param teamId
+     */
+    void deleteByUserIdAndTeamId(Integer userId, Integer teamId);
+
+    /**
+     * 根据团队id查询所有团队成员
+     * @param teamId
+     * @return
+     */
+    List<OfficeDbUserTeam> findAllByTeamId(Integer teamId);
 }

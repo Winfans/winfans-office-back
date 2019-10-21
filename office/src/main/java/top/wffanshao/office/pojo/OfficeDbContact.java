@@ -12,7 +12,6 @@ public class OfficeDbContact {
     private int customerId;
     private Timestamp contactTime;
     private String detail;
-    private String content;
 
     @Id
     @Column(name = "user_id", nullable = false)
@@ -68,15 +67,5 @@ public class OfficeDbContact {
     @Override
     public int hashCode() {
         return Objects.hash(userId, customerId, contactTime, detail);
-    }
-
-    @Basic
-    @Column(name = "content", nullable = false, length = 255)
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 }

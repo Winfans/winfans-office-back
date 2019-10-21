@@ -6,15 +6,15 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "office_db_written", schema = "office_db", catalog = "")
-@IdClass(OfficeDbWrittenPK.class)
 public class OfficeDbWritten {
     private int customerId;
     private int userId;
     private String detail;
     private Timestamp createTime;
     private Double money;
+    private int writtenId;
 
-    @Id
+    @Basic
     @Column(name = "customer_id", nullable = false)
     public int getCustomerId() {
         return customerId;
@@ -24,7 +24,7 @@ public class OfficeDbWritten {
         this.customerId = customerId;
     }
 
-    @Id
+    @Basic
     @Column(name = "user_id", nullable = false)
     public int getUserId() {
         return userId;
@@ -79,5 +79,15 @@ public class OfficeDbWritten {
     @Override
     public int hashCode() {
         return Objects.hash(customerId, userId, detail, createTime, money);
+    }
+
+    @Id
+    @Column(name = "written_id", nullable = false)
+    public int getWrittenId() {
+        return writtenId;
+    }
+
+    public void setWrittenId(int writtenId) {
+        this.writtenId = writtenId;
     }
 }
