@@ -14,10 +14,26 @@ public interface UserCustomerDAO extends JpaRepository<OfficeDbUserCustomer, Int
 
 
     /**
-     *
      * 描述：根据客户id查找用户-客户
+     *
      * @param customerId
      * @return
      */
     OfficeDbUserCustomer findByCustomerId(int customerId);
+
+    /**
+     * 根据用户id和客户id删除客户-用户
+     *
+     * @param customerId
+     * @param userId
+     */
+    void deleteByCustomerIdAndUserId(Integer customerId, Integer userId);
+
+    /**
+     * 根据客户id判断是否存在
+     *
+     * @param customerId
+     * @return
+     */
+    boolean existsByCustomerIdAndUserId(Integer customerId, Integer userId);
 }

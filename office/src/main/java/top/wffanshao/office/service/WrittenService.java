@@ -39,7 +39,7 @@ public interface WrittenService {
      * @param writtenId
      * @return
      */
-    boolean deleteWrittenWrittenId(String token, Integer writtenId);
+    boolean deleteWrittenByWrittenId(String token, Integer writtenId);
 
 
     /**

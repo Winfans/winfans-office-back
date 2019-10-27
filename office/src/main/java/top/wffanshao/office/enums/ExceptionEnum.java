@@ -40,9 +40,9 @@ public enum ExceptionEnum {
     WRITTEN_DELETE_FAIL(500, "签单记录删除失败"),
     WRITTEN_ADD_FAIL(400, "签单记录添加失败"),
 
-
-
     CUSTOMER_NOT_FOUND(404, "客户不存在"),
+    CUSTOMER_DELETE_FAIL(500, "客户删除失败"),
+    CUSTOMER_UPDATE_FAIL(500, "客户删除失败"),
     CUSTOMER_ADD_FAIL(400, "客户添加失败");
 
     private int code;

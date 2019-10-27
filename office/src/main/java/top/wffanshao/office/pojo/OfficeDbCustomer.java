@@ -41,10 +41,6 @@ public class OfficeDbCustomer {
         return status;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
     public void setStatus(Integer status) {
         this.status = status;
     }

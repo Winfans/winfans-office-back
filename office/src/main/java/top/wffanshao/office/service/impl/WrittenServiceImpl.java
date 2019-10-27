@@ -149,7 +149,7 @@ public class WrittenServiceImpl implements WrittenService {
      * @return
      */
     @Override
-    public boolean deleteWrittenWrittenId(String token, Integer writtenId) {
+    public boolean deleteWrittenByWrittenId(String token, Integer writtenId) {
         boolean result = writtenDAO.existsById(writtenId);
         if (!result) {
             throw new MyException(ExceptionEnum.WRITTEN_NOT_FOUND);

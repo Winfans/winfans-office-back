@@ -14,6 +14,7 @@ public class OfficeDbUser {
     private Timestamp firstLoginTime;
     private Timestamp lastLoginTime;
     private int status;
+    private String headImg;
 
     @Id
     @Column(name = "user_id", nullable = false)
@@ -45,7 +46,6 @@ public class OfficeDbUser {
     public void setUserPasswd(String userPasswd) {
         this.userPasswd = userPasswd;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -103,5 +103,15 @@ public class OfficeDbUser {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    @Basic
+    @Column(name = "head_img", nullable = true, length = 255)
+    public String getHeadImg() {
+        return headImg;
+    }
+
+    public void setHeadImg(String headImg) {
+        this.headImg = headImg;
     }
 }

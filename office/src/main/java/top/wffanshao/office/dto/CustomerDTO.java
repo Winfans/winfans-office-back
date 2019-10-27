@@ -4,6 +4,7 @@ package top.wffanshao.office.dto;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * 描述：用户DTO

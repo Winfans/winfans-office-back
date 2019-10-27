@@ -1219,62 +1219,68 @@ customer_id</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="280" parent="218" name="PRIMARY">
+    <column id="280" parent="218" name="head_img">
+      <Position>8</Position>
+      <Comment>头像</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="281" parent="218" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="281" parent="219" name="user_id">
+    <column id="282" parent="219" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="219" name="customer_id">
+    <column id="283" parent="219" name="customer_id">
       <Position>2</Position>
       <Comment>客户id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="283" parent="219" name="customer_id">
+    <index id="284" parent="219" name="customer_id">
       <ColNames>customer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="284" parent="219" name="PRIMARY">
+    <key id="285" parent="219" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 customer_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="285" parent="219" name="office_db_user_customer_ibfk_1">
+    <foreign-key id="286" parent="219" name="office_db_user_customer_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <foreign-key id="286" parent="219" name="office_db_user_customer_ibfk_2">
+    <foreign-key id="287" parent="219" name="office_db_user_customer_ibfk_2">
       <ColNames>customer_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_customer</RefTableName>
       <RefColNames>customer_id</RefColNames>
     </foreign-key>
-    <column id="287" parent="220" name="user_id">
+    <column id="288" parent="220" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="220" name="role_id">
+    <column id="289" parent="220" name="role_id">
       <Position>2</Position>
       <Comment>角色id</Comment>
       <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="220" name="status">
+    <column id="290" parent="220" name="status">
       <Position>3</Position>
       <Comment>状态：0、无效 1、有效</Comment>
       <DataType>int(1)|0s</DataType>
@@ -1282,29 +1288,29 @@ customer_id</ColNames>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="290" parent="220" name="role_id">
+    <index id="291" parent="220" name="role_id">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="291" parent="220" name="PRIMARY">
+    <key id="292" parent="220" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="292" parent="220" name="office_db_user_role_ibfk_1">
+    <foreign-key id="293" parent="220" name="office_db_user_role_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <foreign-key id="293" parent="220" name="office_db_user_role_ibfk_2">
+    <foreign-key id="294" parent="220" name="office_db_user_role_ibfk_2">
       <ColNames>role_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_role</RefTableName>
       <RefColNames>role_id</RefColNames>
     </foreign-key>
-    <column id="294" parent="221" name="user_id">
+    <column id="295" parent="221" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1312,7 +1318,7 @@ role_id</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="221" name="team_id">
+    <column id="296" parent="221" name="team_id">
       <Position>2</Position>
       <Comment>团队id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1320,7 +1326,7 @@ role_id</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="221" name="team_admin">
+    <column id="297" parent="221" name="team_admin">
       <Position>3</Position>
       <Comment>团队管理员：0、队员 1、团队管理员</Comment>
       <DataType>int(1)|0s</DataType>
@@ -1328,88 +1334,89 @@ role_id</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="297" parent="221" name="team_id">
+    <index id="298" parent="221" name="team_id">
       <ColNames>team_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="298" parent="221" name="PRIMARY">
+    <key id="299" parent="221" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 team_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="299" parent="221" name="office_db_user_team_ibfk_1">
+    <foreign-key id="300" parent="221" name="office_db_user_team_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <foreign-key id="300" parent="221" name="office_db_user_team_ibfk_2">
+    <foreign-key id="301" parent="221" name="office_db_user_team_ibfk_2">
       <ColNames>team_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_team</RefTableName>
       <RefColNames>team_id</RefColNames>
     </foreign-key>
-    <column id="301" parent="222" name="written_id">
+    <column id="302" parent="222" name="written_id">
       <Position>1</Position>
       <Comment>id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="222" name="customer_id">
+    <column id="303" parent="222" name="customer_id">
       <Position>2</Position>
       <Comment>客户id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="222" name="user_id">
+    <column id="304" parent="222" name="user_id">
       <Position>3</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="222" name="detail">
+    <column id="305" parent="222" name="detail">
       <Position>4</Position>
       <Comment>详情</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="222" name="create_time">
+    <column id="306" parent="222" name="create_time">
       <Position>5</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="222" name="money">
+    <column id="307" parent="222" name="money">
       <Position>6</Position>
       <Comment>金额（元）</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="307" parent="222" name="customer_id">
+    <index id="308" parent="222" name="customer_id">
       <ColNames>customer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="308" parent="222" name="user_id">
+    <index id="309" parent="222" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="222" name="PRIMARY">
+    <key id="310" parent="222" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>written_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="310" parent="222" name="office_db_written_ibfk_1">
+    <foreign-key id="311" parent="222" name="office_db_written_ibfk_1">
       <ColNames>customer_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_customer</RefTableName>
       <RefColNames>customer_id</RefColNames>
     </foreign-key>
-    <foreign-key id="311" parent="222" name="office_db_written_ibfk_2">
+    <foreign-key id="312" parent="222" name="office_db_written_ibfk_2">
       <ColNames>user_id</ColNames>
       <RefSchemaName>office_db</RefSchemaName>
       <RefTableName>office_db_user</RefTableName>

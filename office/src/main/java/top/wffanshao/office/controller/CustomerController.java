@@ -9,13 +9,9 @@ import top.wffanshao.office.dto.CustomerDTO;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
 import top.wffanshao.office.pojo.OfficeDbCustomer;
-import top.wffanshao.office.pojo.OfficeDbUser;
 import top.wffanshao.office.service.CustomerService;
-import top.wffanshao.office.service.UserService;
 import top.wffanshao.office.vo.ResponsePage;
 import top.wffanshao.office.vo.ResponseResult;
-
-import java.util.List;
 
 
 /**
@@ -59,6 +55,72 @@ public final class CustomerController {
                                                                                                     @PathVariable("page") int page,
                                                                                                     @PathVariable("size") int size) {
         return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", customerService.findAllCustomerTeamIdAndByPage(teamId, page, size)));
+    }
+
+    /**
+     * 描述：删除客户
+     *
+     * @param token
+     * @param customerIdList
+     * @return
+     */
+    @DeleteMapping("deleteCustomerByCustomerId")
+    public ResponseEntity<ResponseResult<Void>> deleteCustomerByCustomerId(
+            @CookieValue("OFFICE_TOKEN") String token,
+            @RequestParam("customerIdList") String customerIdList
+    ) {
+
+        String[] customerIds = customerIdList.split(",");
+
+
+        boolean result = false;
+        for (String customerId : customerIds) {
+
+            System.out.println(customerId);
+            result = customerService.deleteCustomerByCustomerId(token, Integer.parseInt(customerId));
+        }
+        if (!result) {
+            throw new MyException(ExceptionEnum.CUSTOMER_DELETE_FAIL);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "删除成功"));
+    }
+
+    /**
+     * 描述：根据customerId查询客户
+     *
+     * @param customerId
+     * @return
+     */
+    @GetMapping("findCustomerByCustomerId/{customerId}")
+    public ResponseEntity<ResponseResult<CustomerDTO>> findCustomerByCustomerId(@PathVariable("customerId") int customerId) {
+        CustomerDTO customerDTO = customerService.findCustomerByCustomerId(customerId);
+        if (customerDTO == null) {
+            throw new MyException(ExceptionEnum.CUSTOMER_NOT_FOUND);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", customerDTO));
+    }
+
+
+    /**
+     * 描述：根据id修改相对应的客户
+     *
+     * @param customerDTO
+     * @param token
+     * @param customerId
+     * @return
+     */
+    @PostMapping("updateCustomerByCustomerId/{customerId}")
+    public ResponseEntity<ResponseResult<Void>> updateCustomerByCustomerId(
+            CustomerDTO customerDTO,
+            @CookieValue("OFFICE_TOKEN") String token,
+            @PathVariable("customerId") Integer customerId
+    ) {
+        System.out.println(customerDTO.getCustomerName());
+        Boolean result = customerService.updateCustomerByCustomerId(token, customerId, customerDTO);
+        if (!result) {
+            throw new MyException(ExceptionEnum.CUSTOMER_UPDATE_FAIL);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "修改成功"));
     }
 
 

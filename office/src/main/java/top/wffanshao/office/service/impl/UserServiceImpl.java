@@ -146,6 +146,7 @@ public class UserServiceImpl implements UserService {
         if (optional.isPresent()) {
             OfficeDbUser user = optional.get();
             userDTO.setUserName(user.getUserName());
+            userDTO.setHeadImg(user.getHeadImg());
         } else {
             throw new MyException(ExceptionEnum.GET_USER_FAIL);
         }

@@ -54,7 +54,7 @@ public final class AuthController {
         // isLogin!~&({ = b0ad13e59c636ca3709e2622089f7718
         // true!~&({  = aba56d95f20f3726d74cd5e37da00efd
         CookieUtils.setCookie(request, response, loginProperties.getCookieName(),
-                loginProperties.getCookieValue(), loginProperties.getCookieMaxAge(), true);
+                loginProperties.getCookieValue(), loginProperties.getCookieMaxAge(), false);
 
         // 将token写入cookie,并指定httpOnly为true，防止通过JS获取和修改
         CookieUtils.setCookie(request, response, jwtProperties.getCookieName(),

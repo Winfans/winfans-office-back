@@ -38,6 +38,7 @@ import java.util.Optional;
  */
 @Slf4j
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
@@ -148,5 +149,105 @@ public class CustomerServiceImpl implements CustomerService {
         customerResponsePage.setTotalElements((int) customerPage.getTotalElements());
 
         return customerResponsePage;
+    }
+
+    /**
+     * 描述：删除客户
+     *
+     * @param token
+     * @param customerId
+     * @return
+     */
+    @Override
+    public boolean deleteCustomerByCustomerId(String token, Integer customerId) {
+
+        // 解析token获取用户id
+        UserInfo userInfo;
+
+        try {
+            userInfo = JwtUtils.getInfoFromToken(token, jwtProperties.getPublicKey());
+        } catch (Exception e) {
+            log.error("[团队服务] 解析用户token失败{}", e);
+            return false;
+        }
+
+        if (!customerDAO.existsById(customerId)) {
+            throw new MyException(ExceptionEnum.CUSTOMER_NOT_FOUND);
+        }
+
+        if (!userCustomerDAO.existsByCustomerIdAndUserId(customerId, userInfo.getUserId())) {
+            throw new MyException(ExceptionEnum.PERMISSION_DENIED);
+        }
+
+        userCustomerDAO.deleteByCustomerIdAndUserId(customerId, userInfo.getUserId());
+        customerDAO.deleteById(customerId);
+
+        return true;
+    }
+
+    /**
+     * 描述：根据id修改相对应的客户
+     *
+     * @param token
+     * @param customerId
+     * @param customerDTO
+     * @return
+     */
+    @Override
+    public Boolean updateCustomerByCustomerId(String token, Integer customerId,  CustomerDTO customerDTO) {
+        // 解析token获取用户id
+        UserInfo userInfo;
+
+        try {
+            userInfo = JwtUtils.getInfoFromToken(token, jwtProperties.getPublicKey());
+        } catch (Exception e) {
+            log.error("[团队服务] 解析用户token失败{}", e);
+            return false;
+        }
+
+        if (!customerDAO.existsById(customerId)) {
+            throw new MyException(ExceptionEnum.CUSTOMER_NOT_FOUND);
+        }
+
+        if (!userCustomerDAO.existsByCustomerIdAndUserId(customerId, userInfo.getUserId())) {
+            throw new MyException(ExceptionEnum.PERMISSION_DENIED);
+        }
+
+        Optional<OfficeDbCustomer> optional = customerDAO.findById(customerId);
+        optional.ifPresent(customerUpdate -> {
+            customerUpdate.setCustomerName(customerDTO.getCustomerName());
+            customerUpdate.setStatus(customerDTO.getStatus());
+            customerDAO.saveAndFlush(customerUpdate);
+        });
+        return true;
+    }
+
+    /**
+     * 描述：根据customerId查询客户
+     *
+     * @param customerId
+     * @return
+     */
+    @Override
+    public CustomerDTO findCustomerByCustomerId(int customerId) {
+
+        if (!customerDAO.existsById(customerId)) {
+            throw new MyException(ExceptionEnum.CUSTOMER_NOT_FOUND);
+        }
+
+        Optional<OfficeDbCustomer> optional = customerDAO.findById(customerId);
+        CustomerDTO customerDTO = new CustomerDTO();
+        optional.ifPresent(customer -> {
+            customerDTO.setCustomerId(customer.getCustomerId());
+            customerDTO.setCustomerName(customer.getCustomerName());
+            customerDTO.setStatus(customer.getStatus());
+            customerDTO.setCreateTime(customer.getCreateTime());
+            customerDTO.setCreator(customer.getCreator());
+            OfficeDbUserCustomer userCustomer = userCustomerDAO.findByCustomerId(customer.getCustomerId());
+            Optional<OfficeDbUser> optional2 = userDAO.findById(userCustomer.getUserId());
+            optional2.ifPresent(officeDbUser -> customerDTO.setUserName(officeDbUser.getUserName()));
+        });
+
+        return customerDTO;
     }
 }

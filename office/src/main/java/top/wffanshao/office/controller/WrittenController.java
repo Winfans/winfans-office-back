@@ -85,14 +85,14 @@ public class WrittenController {
      * @param userId
      * @return
      */
-    @DeleteMapping("deleteWrittenWrittenId/{writtenId}")
-    public ResponseEntity<ResponseResult<Void>> deleteWrittenWrittenId(
+    @DeleteMapping("deleteWrittenByWrittenId/{writtenId}")
+    public ResponseEntity<ResponseResult<Void>> deleteWrittenByWrittenId(
             @CookieValue("OFFICE_TOKEN") String token,
             @PathVariable("writtenId") Integer writtenId,
             @RequestParam("userId") Integer userId
     ) {
 
-        boolean result = writtenService.deleteWrittenWrittenId(token, writtenId);
+        boolean result = writtenService.deleteWrittenByWrittenId(token, writtenId);
 
         if (!result) {
             throw new MyException(ExceptionEnum.WRITTEN_DELETE_FAIL);

@@ -5,12 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3b7e3ec-cbb6-4839-a2f0-2def4aebb202" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae582bab-39a6-4375-b168-17524ef92de8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae582bab-39a6-4375-b168-17524ef92de8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/WrittenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/WrittenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbWritten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbWritten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/WrittenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/WrittenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/WrittenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/WrittenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/TeamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/TeamController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/WrittenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/controller/WrittenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/CustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/CustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/UserCustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/UserCustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/UserTeamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/UserTeamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/WrittenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dao/WrittenDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/CustomerDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/CustomerDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/WrittenDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/dto/WrittenDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/enums/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/enums/ExceptionEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbContact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbContact.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbWritten.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbWritten.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/pojo/OfficeDbWrittenPK.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/TeamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/WrittenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/WrittenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/TeamServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/WrittenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wffanshao/office/service/impl/WrittenServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +69,61 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="office_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="office_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="office_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="office_db_user_customer: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="139" column="55" lean-forward="true" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="50" />
+              <folding>
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="26" selection-start-line="26" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/test/utils/RedisUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/test/utils/MenuUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/test/utils/WeChatUtil.java" />
@@ -77,41 +160,42 @@
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserRoleDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/StatusEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/RoleEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbSubmenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbMainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/MenuService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/config/MvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponsePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/vo/ResponseResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/TeamDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserCustomer.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserCustomerPK.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbContact.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/TeamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/TeamService.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserTeamDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/TeamServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/WrittenDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbWritten.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/WrittenDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/WrittenService.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/WrittenServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerIdListDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java" />
       </list>
     </option>
   </component>
@@ -139,10 +223,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="48" />
-    <option name="y" value="92" />
-    <option name="width" value="1835" />
-    <option name="height" value="942" />
+    <option name="x" value="145" />
+    <option name="y" value="5" />
+    <option name="width" value="1680" />
+    <option name="height" value="1019" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,7 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,11 +268,64 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="office" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="office" type="b2602c69:ProjectViewProjectNode" />
+              <item name="office" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,7 +337,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571659337844" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572142311563" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,14 +348,6 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="top.wffanshao.office.service.impl" />
-      <recent name="top.wffanshao.office.test.service.impl" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="top.wffanshao.office.pojo" />
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.wffanshao.office.vo" />
       <recent name="top.wffanshao.office.controller" />
@@ -232,6 +361,14 @@
       <recent name="C:\Users\WF帆少\Desktop\winfans-office\office\src\main\java\top\wffanshao\office\test\utils\message" />
       <recent name="C:\Users\WF帆少\Desktop\winfans-office\office\src\main\java\top\wffanshao\office\test\service\impl" />
       <recent name="C:\Users\WF帆少\Desktop\winfans-office\office\src\main\java\top\wffanshao\office\test\service" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="top.wffanshao.office.pojo" />
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="top.wffanshao.office.service.impl" />
+      <recent name="top.wffanshao.office.test.service.impl" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -349,7 +486,10 @@
       <workItem from="1571364042760" duration="18390000" />
       <workItem from="1571444818707" duration="12410000" />
       <workItem from="1571537236240" duration="5247000" />
-      <workItem from="1571630429564" duration="17750000" />
+      <workItem from="1571630429564" duration="17945000" />
+      <workItem from="1571919440640" duration="19755000" />
+      <workItem from="1571989765128" duration="9493000" />
+      <workItem from="1572053983767" duration="2917000" />
     </task>
     <servers />
   </component>
@@ -386,7 +526,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174925000" />
+    <option name="totallyTimeSpent" value="207285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,12 +538,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="74" width="1468" height="753" extended-state="0" />
+    <frame x="116" y="4" width="1344" height="815" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8321168" visible="true" weight="0.24822696" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82421875" visible="true" weight="0.20995334" />
+      <window_info id="Structure" order="1" sideWeight="0.1733871" side_tool="true" weight="0.25427684" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.16788322" side_tool="true" visible="true" weight="0.24822696" />
+      <window_info id="Persistence" order="3" sideWeight="0.17578125" side_tool="true" visible="true" weight="0.20995334" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -419,22 +560,22 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.41054314" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32577905" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32452276" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3290735" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.3290735" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3290735" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3290735" />
       <window_info anchor="bottom" id="Tail" order="15" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.11755233" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.25036603" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.31350482" />
       <window_info anchor="bottom" id="File Transfer" order="18" weight="0.3296" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.15885022" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.15863141" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2070922" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21772939" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.19195047" />
@@ -445,49 +586,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbMainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/RoleEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbTeam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/AuthServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/MenuServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -538,26 +633,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/HibernateSequence.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="72" column="104" selection-start-line="72" selection-start-column="63" selection-end-line="72" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -613,30 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="70" column="103" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbSubmenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -655,16 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/TeamService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -713,33 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="33" column="91" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="55" column="7" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="55" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/WrittenDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -747,13 +754,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -820,34 +820,173 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/WrittenService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        <state relative-caret-position="190">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/WrittenServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="246" column="20" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        <state relative-caret-position="171">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/WrittenServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="142" column="11" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
+        <state relative-caret-position="325">
+          <caret line="245" column="9" lean-forward="true" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerIdListDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dao/UserCustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/CustomerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar!/com/mysql/jdbc/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="938" selection-start-line="938" selection-end-line="938" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.3.1/HikariCP-3.3.1.jar!/com/zaxxer/hikari/pool/ProxyPreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/AuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/pojo/OfficeDbUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="116" column="1" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2982#2983#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
+            <element signature="e#3058#3059#0" expanded="true" />
+            <element signature="e#3096#3097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3933">
+          <caret line="235" column="9" selection-start-line="235" selection-start-column="9" selection-end-line="235" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/controller/WrittenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/enums/ExceptionEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" selection-start-line="26" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="139" column="55" lean-forward="true" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/wffanshao/office/SpringbootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
           </folding>
         </state>
       </provider>
