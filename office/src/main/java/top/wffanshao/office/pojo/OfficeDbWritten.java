@@ -11,9 +11,9 @@ public class OfficeDbWritten {
     private int userId;
     private String detail;
     private Timestamp createTime;
-    private Double money;
-
+    private Float money;
     private int writtenId;
+    private int teamId;
 
     @Basic
     @Column(name = "customer_id", nullable = false)
@@ -57,11 +57,11 @@ public class OfficeDbWritten {
 
     @Basic
     @Column(name = "money", nullable = true, precision = 0)
-    public Double getMoney() {
+    public Float getMoney() {
         return money;
     }
 
-    public void setMoney(Double money) {
+    public void setMoney(Float money) {
         this.money = money;
     }
 
@@ -91,5 +91,15 @@ public class OfficeDbWritten {
 
     public void setWrittenId(int writtenId) {
         this.writtenId = writtenId;
+    }
+
+    @Basic
+    @Column(name = "team_id", nullable = false)
+    public int getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(int teamId) {
+        this.teamId = teamId;
     }
 }

@@ -29,6 +29,8 @@ public interface UserCustomerDAO extends JpaRepository<OfficeDbUserCustomer, Int
      */
     void deleteByCustomerIdAndUserId(Integer customerId, Integer userId);
 
+    void deleteByUserId(Integer userId);
+
     /**
      * 根据客户id判断是否存在
      *
@@ -36,4 +38,6 @@ public interface UserCustomerDAO extends JpaRepository<OfficeDbUserCustomer, Int
      * @return
      */
     boolean existsByCustomerIdAndUserId(Integer customerId, Integer userId);
+
+    boolean existsByUserId(Integer userId);
 }

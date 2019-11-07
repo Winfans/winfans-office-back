@@ -23,7 +23,7 @@ public interface WrittenService {
     ResponsePage<WrittenDTO> findAllWrittenByPage(int teamId, int page, int size);
 
     /**
-     * 描述：添加成员
+     * 描述：添加签单记录
      *
      * @param token
      * @param writtenDTO
@@ -50,7 +50,7 @@ public interface WrittenService {
      * @param written
      * @return
      */
-    Boolean updateWrittenByWrittenId(String token, Integer writtenId, OfficeDbWritten written);
+    Boolean updateWrittenByWrittenId(String token, Integer writtenId, WrittenDTO writtenDTO);
 
     /**
      * 描述：根据writtenId查询签单记录

@@ -12,4 +12,21 @@ import top.wffanshao.office.pojo.OfficeDbUserRole;
  * @date 2019/10/12
  */
 public interface UserRoleDAO extends JpaRepository<OfficeDbUserRole, Integer>, JpaSpecificationExecutor<OfficeDbUserRole> {
+
+    /**
+     * 根据用户id查询用户-角色
+     *
+     * @param userId
+     * @return
+     */
+    OfficeDbUserRole findByUserId(Integer userId);
+
+    /**
+     * 根据用户id删除用户-角色
+     *
+     * @param userId
+     */
+    void deleteByUserId(Integer userId);
+
+    boolean existsByUserId(Integer userId);
 }

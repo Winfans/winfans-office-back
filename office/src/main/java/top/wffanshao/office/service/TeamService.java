@@ -2,6 +2,7 @@ package top.wffanshao.office.service;
 
 
 import top.wffanshao.office.dto.TeamDTO;
+import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.pojo.OfficeDbTeam;
 import top.wffanshao.office.pojo.OfficeDbUser;
 import top.wffanshao.office.pojo.OfficeDbUserTeam;
@@ -75,5 +76,5 @@ public interface TeamService {
      * @param teamId
      * @return
      */
-    List<OfficeDbUser> findAllUserTeamByTeamId(Integer teamId);
+    List<UserDTO> findAllUserTeamByTeamId(Integer teamId);
 }

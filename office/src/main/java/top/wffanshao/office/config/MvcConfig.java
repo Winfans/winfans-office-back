@@ -47,6 +47,13 @@ public class MvcConfig implements WebMvcConfigurer {
         excludePath.add("/auth/auth");
         excludePath.add("/auth/verify");
         excludePath.add("/user/register");
+
+        excludePath.add("/user/findAllUserByPage");
+        excludePath.add("/user/deleteUserByUserId/*");
+        excludePath.add("/user/findUserByUserId/*");
+        excludePath.add("/user/updateUserByUserId/*");
+
+
 //        excludePath.add("/wx/wxAccess");
 
 

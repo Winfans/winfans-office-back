@@ -9,12 +9,10 @@ import top.wffanshao.office.dao.TeamDAO;
 import top.wffanshao.office.dao.UserDAO;
 import top.wffanshao.office.dao.UserTeamDAO;
 import top.wffanshao.office.dto.TeamDTO;
+import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
-import top.wffanshao.office.pojo.OfficeDbSubmenu;
-import top.wffanshao.office.pojo.OfficeDbTeam;
-import top.wffanshao.office.pojo.OfficeDbUser;
-import top.wffanshao.office.pojo.OfficeDbUserTeam;
+import top.wffanshao.office.pojo.*;
 import top.wffanshao.office.properties.JwtProperties;
 import top.wffanshao.office.service.MenuService;
 import top.wffanshao.office.service.TeamService;
@@ -148,7 +146,7 @@ public class TeamServiceImpl implements TeamService {
      * @return
      */
     @Override
-    public Boolean updateTeamByTeamId(String token,Integer teamId, OfficeDbTeam team) {
+    public Boolean updateTeamByTeamId(String token, Integer teamId, OfficeDbTeam team) {
 
         boolean result = teamDAO.existsById(teamId);
         if (!result) {
@@ -196,7 +194,6 @@ public class TeamServiceImpl implements TeamService {
         if (!result) {
             throw new MyException(ExceptionEnum.TEAM_NOT_FOUND);
         }
-
 
 
         // 解析token获取用户id
@@ -260,9 +257,10 @@ public class TeamServiceImpl implements TeamService {
             log.error("[团队服务] 解析用户token失败{}", e);
             throw new MyException(ExceptionEnum.NO_AUTHENTICATION);
         }
-
-        userTeamDAO.deleteByUserIdAndTeamId(userId, teamId);
-
+        OfficeDbUserTeamPK userTeamPK = new OfficeDbUserTeamPK();
+        userTeamPK.setTeamId(teamId);
+        userTeamPK.setUserId(userId);
+        userTeamDAO.deleteById(userTeamPK);
         return true;
     }
 
@@ -273,16 +271,26 @@ public class TeamServiceImpl implements TeamService {
      * @return
      */
     @Override
-    public List<OfficeDbUser> findAllUserTeamByTeamId(Integer teamId) {
+    public List<UserDTO> findAllUserTeamByTeamId(Integer teamId) {
+
         List<OfficeDbUserTeam> userTeamList = userTeamDAO.findAllByTeamId(teamId);
 
-        List<OfficeDbUser> userList = new ArrayList<>();
+        List<UserDTO> userDtoList = new LinkedList<>();
 
         userTeamList.forEach(userTeam -> {
+
+            UserDTO userDto = new UserDTO();
+
             Optional<OfficeDbUser> optional = userDAO.findById(userTeam.getUserId());
-            optional.ifPresent(userList::add);
+            if (optional.isPresent()) {
+                OfficeDbUser user = optional.get();
+                userDto.setUserId(user.getUserId());
+                userDto.setUserName(user.getUserName());
+                userDto.setTeamAdmin(userTeam.getTeamAdmin());
+                userDtoList.add(userDto);
+            }
         });
-        return userList;
+        return userDtoList;
     }
 
 

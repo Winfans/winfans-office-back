@@ -37,14 +37,17 @@ public interface UserTeamDAO extends JpaRepository<OfficeDbUserTeam, OfficeDbUse
 
 
     /**
-     * 根据用户id和团队id删除团队成员
+     * 根据用户id删除团队成员
+     *
      * @param userId
-     * @param teamId
      */
-    void deleteByUserIdAndTeamId(Integer userId, Integer teamId);
+    void deleteByUserId(Integer userId);
+
+    boolean existsByUserId(Integer userId);
 
     /**
      * 根据团队id查询所有团队成员
+     *
      * @param teamId
      * @return
      */

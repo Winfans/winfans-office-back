@@ -12,11 +12,12 @@ import java.sql.Timestamp;
  */
 @Data
 public class WrittenDTO {
+    private Integer writtenId;
     private Integer customerId;
     private Integer userId;
     private String customerName;
     private String userName;
     private String detail;
     private Timestamp createTime;
-    private Double money;
+    private Float money;
 }

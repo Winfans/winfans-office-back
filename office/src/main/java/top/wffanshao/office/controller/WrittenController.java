@@ -58,7 +58,7 @@ public class WrittenController {
 
 
     /**
-     * 描述：添加成员
+     * 描述：添加签单记录
      *
      * @param token
      * @param writtenDTO
@@ -82,14 +82,12 @@ public class WrittenController {
      *
      * @param token
      * @param writtenId
-     * @param userId
      * @return
      */
     @DeleteMapping("deleteWrittenByWrittenId/{writtenId}")
     public ResponseEntity<ResponseResult<Void>> deleteWrittenByWrittenId(
             @CookieValue("OFFICE_TOKEN") String token,
-            @PathVariable("writtenId") Integer writtenId,
-            @RequestParam("userId") Integer userId
+            @PathVariable("writtenId") Integer writtenId
     ) {
 
         boolean result = writtenService.deleteWrittenByWrittenId(token, writtenId);
@@ -106,16 +104,16 @@ public class WrittenController {
      *
      * @param token
      * @param writtenId
-     * @param written
+     * @param writtenDTO
      * @return
      */
-    @PutMapping("updateWrittenByWrittenId/{writtenId}")
+    @PostMapping("updateWrittenByWrittenId/{writtenId}")
     public ResponseEntity<ResponseResult<Void>> updateWrittenByWrittenId(
             @CookieValue("OFFICE_TOKEN") String token,
             @PathVariable("writtenId") Integer writtenId,
-            OfficeDbWritten written
+            WrittenDTO writtenDTO
     ) {
-        Boolean result = writtenService.updateWrittenByWrittenId(token, writtenId, written);
+        Boolean result = writtenService.updateWrittenByWrittenId(token, writtenId, writtenDTO);
         if (!result) {
             throw new MyException(ExceptionEnum.TEAM_UPDATE_FAIL);
         }

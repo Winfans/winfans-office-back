@@ -3,11 +3,16 @@ package top.wffanshao.office.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wffanshao.office.bo.UserInfo;
+import top.wffanshao.office.dao.UserCustomerDAO;
 import top.wffanshao.office.dao.UserDAO;
 import top.wffanshao.office.dao.UserRoleDAO;
+import top.wffanshao.office.dao.UserTeamDAO;
 import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.enums.RoleEnum;
@@ -19,8 +24,12 @@ import top.wffanshao.office.properties.JwtProperties;
 import top.wffanshao.office.service.UserService;
 import top.wffanshao.office.utils.CodecUtils;
 import top.wffanshao.office.utils.JwtUtils;
+import top.wffanshao.office.vo.ResponsePage;
 
+import javax.persistence.criteria.Path;
 import java.sql.Timestamp;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -40,7 +49,13 @@ public class UserServiceImpl implements UserService {
     private UserRoleDAO userRoleDAO;
 
     @Autowired
-    private JwtProperties  jwtProperties;
+    private UserCustomerDAO userCustomerDAO;
+
+    @Autowired
+    private UserTeamDAO userTeamDAO;
+
+    @Autowired
+    private JwtProperties jwtProperties;
 
     /**
      * 描述：检查用户名是否可用
@@ -152,5 +167,109 @@ public class UserServiceImpl implements UserService {
         }
 
         return userDTO;
+    }
+
+    /**
+     * 描述：分页查询所有用户信息
+     *
+     * @return
+     */
+    @Override
+    public List<UserDTO> findAllUserByPage() {
+        System.out.println("test");
+        List<OfficeDbUser> userList = userDAO.findAll();
+
+        List<UserDTO> userDtoList = new LinkedList<>();
+
+        userList.forEach(user -> {
+            UserDTO userDTO = new UserDTO();
+            userDTO.setUserId(user.getUserId());
+            userDTO.setUserName(user.getUserName());
+            userDtoList.add(userDTO);
+        });
+
+        return userDtoList;
+    }
+
+    /**
+     * 描述：根据userId查询用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public UserDTO findUserByUserId(Integer userId) {
+
+        Optional<OfficeDbUser> optional = userDAO.findById(userId);
+
+        if (optional.isPresent()) {
+            OfficeDbUser user = optional.get();
+            UserDTO userDTO = new UserDTO();
+            userDTO.setUserId(user.getUserId());
+            userDTO.setUserName(user.getUserName());
+            return userDTO;
+        }
+        return null;
+    }
+
+    /**
+     * 描述：删除用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean deleteUserByUserId(Integer userId) {
+
+        try {
+            userRoleDAO.findAll().forEach(userRole -> {
+                if (userRole.getUserId() == userId) {
+                    userRoleDAO.deleteByUserId(userId);
+                }
+            });
+
+            userTeamDAO.findAll().forEach(userTeam -> {
+                if (userTeam.getUserId() == userId) {
+                    userTeamDAO.deleteByUserId(userId);
+                }
+            });
+
+            userCustomerDAO.findAll().forEach(userCustomer -> {
+                if (userCustomer.getUserId() == userId) {
+                    userCustomerDAO.deleteByUserId(userId);
+                }
+            });
+
+            if (userDAO.existsById(userId)) {
+                userDAO.deleteById(userId);
+            }
+
+            return true;
+
+        } catch (Exception e) {
+            throw new MyException(ExceptionEnum.USER_DELETE_FAIL);
+        }
+    }
+
+    /**
+     * 描述：根据id修改相对应的用户信息
+     *
+     * @param userId
+     * @param userDTO
+     * @return
+     */
+    @Override
+    public Boolean updateUserByUserId(Integer userId, UserDTO userDTO) {
+        Optional<OfficeDbUser> optional = userDAO.findById(userId);
+
+        if (optional.isPresent()) {
+            OfficeDbUser user = optional.get();
+            user.setUserName(userDTO.getUserName());
+            userDAO.saveAndFlush(user);
+            return true;
+
+        }
+        return false;
     }
 }

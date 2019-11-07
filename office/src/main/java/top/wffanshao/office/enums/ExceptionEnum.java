@@ -21,6 +21,8 @@ public enum ExceptionEnum {
     NO_AUTHENTICATION(400,"未授权"),
     USER_VERIFY_FAIL(400, "用户验证失败"),
     USER_REGISTER_FAIL(400, "用户注册失败"),
+    USER_DELETE_FAIL(500, "用户删除失败"),
+    USER_UPDATE_FAIL(500, "用户删除失败"),
     GET_USER_FAIL(500, "查询用户失败"),
     PARSE_USER_TOKEN_FAIL(500, "解析用户token失败"),
     USER_NOT_FOUND(404, "用户不存在"),

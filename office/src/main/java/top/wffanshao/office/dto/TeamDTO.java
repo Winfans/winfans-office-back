@@ -3,6 +3,8 @@ package top.wffanshao.office.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * 描述：团队DTO
  *
@@ -15,7 +17,7 @@ public class TeamDTO {
     /**
      * 团队id
      */
-    private int teamId;
+    private Integer teamId;
 
     /**
      * 团队名称
@@ -42,5 +44,14 @@ public class TeamDTO {
      * 子路径
      */
     private String subPath;
+
+    /**
+     * 团队成员
+     */
+    private List<UserDTO> userDtoList;
+
+
+
+
 
 }

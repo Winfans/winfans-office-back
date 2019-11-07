@@ -3,6 +3,9 @@ package top.wffanshao.office.service;
 
 import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.pojo.OfficeDbUser;
+import top.wffanshao.office.vo.ResponsePage;
+
+import java.util.List;
 
 /**
  * 描述：用户Service
@@ -45,5 +48,37 @@ public interface UserService {
      * @return 用户信息
      */
     UserDTO getUserDTO(String token);
+
+    /**
+     * 描述：分页查询所有用户信息
+     *
+     * @return
+     */
+    List<UserDTO> findAllUserByPage();
+
+    /**
+     * 描述：根据userId查询用户信息
+     *
+     * @param userId
+     * @return
+     */
+    UserDTO findUserByUserId(Integer userId);
+
+    /**
+     * 描述：删除用户信息
+     *
+     * @param userId
+     * @return
+     */
+    boolean deleteUserByUserId(Integer userId);
+
+    /**
+     * 描述：根据id修改相对应的用户信息
+     *
+     * @param userId
+     * @param userDTO
+     * @return
+     */
+    Boolean updateUserByUserId( Integer userId, UserDTO userDTO);
 
 }

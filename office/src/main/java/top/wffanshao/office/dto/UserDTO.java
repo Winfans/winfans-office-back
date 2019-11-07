@@ -14,5 +14,8 @@ public class UserDTO {
 
     private String userName;
     private String headImg;
+    private Integer userId;
+    private Integer teamAdmin;
+
 
 }

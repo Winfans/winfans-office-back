@@ -58,7 +58,7 @@ public class WrittenServiceImpl implements WrittenService {
      *
      * @param teamId
      * @param page   当前页数
-     * @param size   总叶数
+     * @param size   总页数
      * @return
      */
     @Override
@@ -91,11 +91,12 @@ public class WrittenServiceImpl implements WrittenService {
             Optional<OfficeDbCustomer> customerOptional = customerDAO.findById(customerId);
             customerOptional.ifPresent(customer -> writtenDTO.setCustomerName(customer.getCustomerName()));
             Optional<OfficeDbUser> userOptional = userDAO.findById(userId);
-            userOptional.ifPresent(user -> writtenDTO.setCustomerName(user.getUserName()));
+            userOptional.ifPresent(user -> writtenDTO.setUserName(user.getUserName()));
             writtenDTO.setDetail(written.getDetail());
             writtenDTO.setMoney(written.getMoney());
             writtenDTO.setUserId(userId);
             writtenDTO.setCustomerId(customerId);
+            writtenDTO.setWrittenId(written.getWrittenId());
             writtenDtoList.add(writtenDTO);
         });
 
@@ -109,7 +110,7 @@ public class WrittenServiceImpl implements WrittenService {
     }
 
     /**
-     * 描述：添加成员
+     * 描述：添加签单记录
      *
      * @param token
      * @param writtenDTO
@@ -125,14 +126,16 @@ public class WrittenServiceImpl implements WrittenService {
             log.error("[团队服务] 解析用户token失败{}", e);
             throw new MyException(ExceptionEnum.NO_AUTHENTICATION);
         }
-
         OfficeDbCustomer customer = customerDAO.findByCustomerName(writtenDTO.getCustomerName());
+
         OfficeDbWritten written = new OfficeDbWritten();
         written.setUserId(userInfo.getUserId());
         written.setCustomerId(customer.getCustomerId());
         written.setCreateTime(new Timestamp(System.currentTimeMillis()));
         written.setMoney(writtenDTO.getMoney());
         written.setDetail(writtenDTO.getDetail());
+        written.setTeamId(customer.getTeamId());
+
         OfficeDbWritten savedWritten = writtenDAO.saveAndFlush(written);
 
         if (savedWritten.getWrittenId() == 0)   {
@@ -184,7 +187,7 @@ public class WrittenServiceImpl implements WrittenService {
      * @return
      */
     @Override
-    public Boolean updateWrittenByWrittenId(String token, Integer writtenId, OfficeDbWritten writtenDTO) {
+    public Boolean updateWrittenByWrittenId(String token, Integer writtenId, WrittenDTO writtenDTO) {
 
         boolean result = writtenDAO.existsById(writtenId);
         if (!result) {
@@ -211,6 +214,7 @@ public class WrittenServiceImpl implements WrittenService {
 
             written.setDetail(writtenDTO.getDetail());
             written.setMoney(writtenDTO.getMoney());
+            written.setCustomerId(customerDAO.findByCustomerName(writtenDTO.getCustomerName()).getCustomerId());
             writtenDAO.saveAndFlush(written);
             return true;
 
@@ -238,10 +242,11 @@ public class WrittenServiceImpl implements WrittenService {
             writtenDTO.setCustomerId(customerId);
             int userId = written.getUserId();
             writtenDTO.setUserId(userId);
+            writtenDTO.setWrittenId(written.getWrittenId());
             Optional<OfficeDbCustomer> customerOptional = customerDAO.findById(customerId);
             customerOptional.ifPresent(customer -> writtenDTO.setCustomerName(customer.getCustomerName()));
             Optional<OfficeDbUser> userOptional = userDAO.findById(userId);
-            userOptional.ifPresent(user -> writtenDTO.setCustomerName(user.getUserName()));
+            userOptional.ifPresent(user -> writtenDTO.setUserName(user.getUserName()));
             return writtenDTO;
         }
         return null;

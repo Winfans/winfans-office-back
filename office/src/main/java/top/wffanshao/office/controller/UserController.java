@@ -10,7 +10,10 @@ import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
 import top.wffanshao.office.pojo.OfficeDbUser;
 import top.wffanshao.office.service.UserService;
+import top.wffanshao.office.vo.ResponsePage;
 import top.wffanshao.office.vo.ResponseResult;
+
+import java.util.List;
 
 
 /**
@@ -72,6 +75,71 @@ public final class UserController {
         return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userService.getUserDTO(token)));
     }
 
+    /**
+     * 描述：分页查询所有用户信息
+     *
+     * @return
+     */
+    @GetMapping("findAllUserByPage")
+    public ResponseEntity<ResponseResult<List<UserDTO>>> findAllUserByPage() {
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userService.findAllUserByPage()));
+    }
+
+
+    /**
+     * 描述：根据userId查询用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("findUserByUserId/{userId}")
+    public ResponseEntity<ResponseResult<UserDTO>> findUserByUserId(
+            @PathVariable("userId") Integer userId) {
+        UserDTO userDto = userService.findUserByUserId(userId);
+        if (userDto == null) {
+            throw new MyException(ExceptionEnum.USER_NOT_FOUND);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userDto));
+    }
+
+    /**
+     * 描述：删除用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @DeleteMapping("deleteUserByUserId/{userId}")
+    public ResponseEntity<ResponseResult<Void>> deleteUserByUserId(
+            @PathVariable("userId") Integer userId
+    ) {
+
+        boolean result = userService.deleteUserByUserId(userId);
+
+        if (!result) {
+            throw new MyException(ExceptionEnum.USER_DELETE_FAIL);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "删除成功"));
+    }
+
+
+    /**
+     * 描述：根据id修改相对应的用户信息
+     *
+     * @param userId
+     * @param userDTO
+     * @return
+     */
+    @PostMapping("updateUserByUserId/{userId}")
+    public ResponseEntity<ResponseResult<Void>> updateUserByUserId(
+            @PathVariable("userId") Integer userId,
+            UserDTO userDTO
+    ) {
+        Boolean result = userService.updateUserByUserId(userId, userDTO);
+        if (!result) {
+            throw new MyException(ExceptionEnum.USER_UPDATE_FAIL);
+        }
+        return ResponseEntity.ok(new ResponseResult<>(200, "修改成功"));
+    }
 
 
 }

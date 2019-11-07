@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import top.wffanshao.office.dto.TeamDTO;
+import top.wffanshao.office.dto.UserDTO;
 import top.wffanshao.office.enums.ExceptionEnum;
 import top.wffanshao.office.exception.MyException;
 import top.wffanshao.office.pojo.OfficeDbTeam;
@@ -51,6 +52,8 @@ public final class TeamController {
         return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", teamService.findAllTeam(token)));
     }
 
+
+
     /**
      * 描述：根据团队id查找相对应的团队信息
      *
@@ -95,7 +98,7 @@ public final class TeamController {
     public ResponseEntity<ResponseResult<Void>> addTeamUserByTeamId(
             @CookieValue("OFFICE_TOKEN") String token,
             @PathVariable("teamId") Integer teamId,
-            @RequestParam("userNmae") String userName
+            @RequestParam("userName") String userName
 
     ) {
         boolean result = teamService.addTeamUserByTeamId(token, teamId, userName);
@@ -137,14 +140,14 @@ public final class TeamController {
      * @return
      */
     @GetMapping("findAllUserTeamByTeamId/{teamId}")
-    public ResponseEntity<ResponseResult<List<OfficeDbUser>>> findAllUserTeamByTeamId(@PathVariable("teamId") Integer teamId) {
+    public ResponseEntity<ResponseResult<List<UserDTO>>> findAllUserTeamByTeamId(@PathVariable("teamId") Integer teamId) {
 
-        List<OfficeDbUser> userList = teamService.findAllUserTeamByTeamId(teamId);
+        List<UserDTO> userDtoList = teamService.findAllUserTeamByTeamId(teamId);
 
-        if (CollectionUtils.isEmpty(userList)) {
+        if (CollectionUtils.isEmpty(userDtoList)) {
             throw new MyException(ExceptionEnum.USER_NOT_FOUND);
         }
-        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userList));
+        return ResponseEntity.ok(new ResponseResult<>(200, "查询成功", userDtoList));
     }
 
 
