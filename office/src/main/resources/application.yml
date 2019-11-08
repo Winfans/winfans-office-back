@@ -3,7 +3,7 @@ server:
   port: 12649
   #### springmvc启动路径
   servlet:
-    path: /
+    path: /office-api
     # path: "*.do"
 
 #### 日志级别
@@ -18,7 +18,7 @@ spring:
     #### 数据库配置
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/office_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://47.93.0.90:3306/office_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: xwEPP-Fd2zcf
     #### Hikari 连接池配置 ------ 详细配置请访问：https://github.com/brettwooldridge/HikariCP
