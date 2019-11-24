@@ -43,6 +43,8 @@ public class MvcConfig implements WebMvcConfigurer {
 //        excludePath.add("/swagger-ui.html");
 //        excludePath.add("/swagger-resources/**");
 //        excludePath.add("/webjars/**");
+//        excludePath.add("/wx/wxAccess");
+
 
         excludePath.add("/auth/auth");
         excludePath.add("/auth/verify");
@@ -53,9 +55,7 @@ public class MvcConfig implements WebMvcConfigurer {
         excludePath.add("/user/findUserByUserId/*");
         excludePath.add("/user/updateUserByUserId/*");
 
-
-//        excludePath.add("/wx/wxAccess");
-
+        excludePath.add("/upload/*");
 
         registry.addInterceptor(loginInterceptor())
                 .addPathPatterns("/**").excludePathPatterns(excludePath);

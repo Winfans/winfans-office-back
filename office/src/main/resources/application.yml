@@ -48,6 +48,15 @@ spring:
       ddl-auto: update
       naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image: # 缩略图
+    width: 60
+    height: 60
+  tracker-list: # tracker地址
+    - 47.93.0.90:22122
+
 office:
   jwt:
     secret: office@Login(Auth}*^520)&jobgo!#% # 登录校验的密钥
@@ -60,6 +69,9 @@ office:
     cookieName: b0ad13e59c636ca3709e2622089f7718
     cookieValue: aba56d95f20f3726d74cd5e37da00efd
     cookieMaxAge: 1800
+  upload:
+    baseUrl: http://www.wffanshao.top
+
 
 
 

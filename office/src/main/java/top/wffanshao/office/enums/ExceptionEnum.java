@@ -28,6 +28,8 @@ public enum ExceptionEnum {
     USER_NOT_FOUND(404, "用户不存在"),
     PERMISSION_DENIED(403, "没有权限"),
 
+    UPLOAD_FAIL(400, "上传失败"),
+
     TEAM_CREATE_FAIL(400, "团队创建失败"),
     TEAM_NOT_FOUND(404, "团队不存在"),
     TEAM_UPDATE_FAIL(400, "团队修改失败"),
