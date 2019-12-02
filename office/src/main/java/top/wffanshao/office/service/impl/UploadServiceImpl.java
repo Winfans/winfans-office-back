@@ -64,7 +64,6 @@ public final class UploadServiceImpl implements UploadService {
             // 生成保存目录、保存图片、拼接图片地址
             StorePath storePath = this.storageClient.uploadFile(
                     file.getInputStream(), file.getSize(), getExtension(file.getOriginalFilename()), null);
-
             return uploadProperties.getBaseUrl() + "/" + storePath.getFullPath();
         } catch (Exception e) {
             log.info("[上传服务] 上传失败，发生异常");

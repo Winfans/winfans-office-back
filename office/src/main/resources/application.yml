@@ -3,7 +3,7 @@ server:
   port: 12649
   #### springmvc启动路径
   servlet:
-    path: /office-api
+    path: /
     # path: "*.do"
 
 #### 日志级别

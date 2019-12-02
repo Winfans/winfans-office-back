@@ -1,0 +1,80 @@
+server:
+  #### 修改端口
+  port: 12649
+  #### springmvc启动路径
+  servlet:
+    path: /
+    # path: "*.do"
+
+#### 日志级别
+logging:
+  level:
+    #### 开启debug
+    top.wffanshao: debug
+
+spring:
+  #### 数据源
+  datasource:
+    #### 数据库配置
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.93.0.90:3306/office_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: xwEPP-Fd2zcf
+    #### Hikari 连接池配置 ------ 详细配置请访问：https://github.com/brettwooldridge/HikariCP
+    hikari:
+      #### 最小空闲连接数量
+      minimum-idle: 5
+      #### 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 180000
+      #### 连接池最大连接数，默认是10
+      maximum-pool-size: 10
+      #### 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      auto-commit: true
+      #### 连接池母子
+      pool-name: MyHikariCP
+      #### 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 1800000
+      #### 数据库连接超时时间,默认30秒，即30000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+  #### Spring Data JPA
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image: # 缩略图
+    width: 60
+    height: 60
+  tracker-list: # tracker地址
+    - 47.93.0.90:22122
+
+office:
+  jwt:
+    secret: office@Login(Auth}*^520)&jobgo!#% # 登录校验的密钥
+    pubKeyPath: /usr/local/tmp/rsa/rsa.pub # 公钥地址
+    priKeyPath: /usr/local/tmp/rsa/rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: OFFICE_TOKEN
+    cookieMaxAge: 1800
+  login:
+    cookieName: b0ad13e59c636ca3709e2622089f7718
+    cookieValue: aba56d95f20f3726d74cd5e37da00efd
+    cookieMaxAge: 1800
+  upload:
+    baseUrl: http://www.wffanshao.top
+
+
+
+
+
+
+
