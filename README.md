@@ -1,6 +1,6 @@
 # winfans-office-back
 
-> 这是一个云办公系统的后端项目。它是基于maven构建的Java前后端项目，其包含了 Springboot & Spring & Spring Mvc & Spring Data Jpa & MySQL
+> 这是一个云办公系统的后端项目。它是基于maven构建的Java前后端分离项目，其包含了 Springboot & Spring & Spring Mvc & Spring Data Jpa & MySQL
 
 [前端项目](https://github.com/Winfans/winfans-office-front)
 
