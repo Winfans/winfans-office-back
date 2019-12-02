@@ -1,6 +1,6 @@
 server:
   #### 修改端口
-  port: 12649
+  port: 8888
   #### springmvc启动路径
   servlet:
     path: /
@@ -18,9 +18,9 @@ spring:
     #### 数据库配置
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.93.0.90:3306/office_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: xwEPP-Fd2zcf
+    url: jdbc:mysql://48.15.10.80:3306/office_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: username
+    password: password
     #### Hikari 连接池配置 ------ 详细配置请访问：https://github.com/brettwooldridge/HikariCP
     hikari:
       #### 最小空闲连接数量
@@ -55,11 +55,11 @@ fdfs:
     width: 60
     height: 60
   tracker-list: # tracker地址
-    - 47.93.0.90:22122
+    - 48.15.10.80:12124
 
 office:
   jwt:
-    secret: office@Login(Auth}*^520)&jobgo!#% # 登录校验的密钥
+    secret: office@546467086*^484641dgdgdf!#% # 登录校验的密钥
     pubKeyPath: /usr/local/tmp/rsa/rsa.pub # 公钥地址
     priKeyPath: /usr/local/tmp/rsa/rsa.pri # 私钥地址
     expire: 30 # 过期时间,单位分钟
